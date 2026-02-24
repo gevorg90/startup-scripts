@@ -16,7 +16,7 @@ echo 'Install required packages'
 echo 'installing comfy-cli'
 pip install comfy-cli
 echo 'installing comfy'
-echo "y" | comfy --here install --nvidia
+printf "n\n" | comfy --here install --nvidia
 # echo 'install pip packages'
 # pip install bitsandbytes "accelerate>=0.26.0" sageattention==1.0.6
 
