@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+echo '___Starting___'
 source /venv/main/bin/activate
 # Redirect all output (stdout and stderr) to /workspace/startup.log
 exec > /workspace/startup.log 2>&1
@@ -12,24 +12,27 @@ cd /workspace/comfyui
 python3 -m venv venv
 source venv/bin/activate
 
-# Install required packages
+echo 'Install required packages'
+echo 'installing comfy-cli'
 pip install comfy-cli
+echo 'installing comfy'
 echo "y" | comfy --here install --nvidia
+echo 'install pip packages'
 pip install bitsandbytes "accelerate>=0.26.0" sageattention==1.0.6
 
-# Download checkpoints
+echo 'Download checkpoints'
 cd /workspace/comfyui/ComfyUI/models/checkpoints
 wget https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-fp8.safetensors
 
-# Download latent upscale models
+echo 'Download latent upscale models'
 cd /workspace/comfyui/ComfyUI/models/latent_upscale_models
 wget https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-spatial-upscaler-x2-1.0.safetensors
 
-# Clone text encoder
+echo "Clone text encoder"
 cd /workspace/comfyui/ComfyUI/models/text_encoders
 git clone https://huggingface.co/unsloth/gemma-3-12b-it-bnb-4bit
 
-# Prepare start script
+echo 'Prepare start script'
 cd /workspace
 mkdir -p start
 cd start
