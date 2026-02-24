@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+source /venv/main/bin/activate
 # Redirect all output (stdout and stderr) to /workspace/startup.log
 exec > /workspace/startup.log 2>&1
 
@@ -7,7 +9,7 @@ exec > /workspace/startup.log 2>&1
 mkdir -p /workspace/comfyui
 cd /workspace/comfyui
 
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 
 # Install required packages
