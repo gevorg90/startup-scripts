@@ -16,8 +16,8 @@ echo "y" | comfy --here install --nvidia
 pip install bitsandbytes "accelerate>=0.26.0" sageattention==1.0.6
 
 # Download checkpoints
-cd /workspace/comfyui/ComfyUI/models/checkpoints
-wget https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-fp8.safetensors
+#cd /workspace/comfyui/ComfyUI/models/checkpoints
+#wget https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-fp8.safetensors
 
 # Download latent upscale models
 #cd /workspace/comfyui/ComfyUI/models/latent_upscale_models
