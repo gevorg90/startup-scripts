@@ -119,6 +119,10 @@ echo 'Install CRT-Nodes'
 git clone https://github.com/PGCRT/CRT-Nodes
 pip install -r CRT-Nodes/requirements.txt
 
+echo 'Install comfyui-dream-video-batches'
+git clone https://github.com/alt-key-project/comfyui-dream-video-batches
+pip install -r comfyui-dream-video-batches/requirements.txt
+
 echo 'Custom fix'
 mkdir -p /workspace/comfyui/ComfyUI/custom_nodes/ComfyUI-Frame-Interpolation/ckpts/rife
 wget -O /workspace/comfyui/ComfyUI/custom_nodes/ComfyUI-Frame-Interpolation/ckpts/rife/rife47.pth https://huggingface.co/jasonot/mycomfyui/resolve/main/rife47.pth
