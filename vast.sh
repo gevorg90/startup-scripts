@@ -119,4 +119,6 @@ echo 'Install CRT-Nodes'
 git clone https://github.com/PGCRT/CRT-Nodes
 pip install -r CRT-Nodes/requirements.txt
 
+echo 'Custom fix'
+cd /workspace/comfyui/ComfyUI/custom_nodes/ComfyUI-Frame-Interpolation/ckpts/rife && wget https://huggingface.co/jasonot/mycomfyui/resolve/main/rife47.pth
 echo '____FINISHED____'
