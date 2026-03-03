@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo '___Starting___'
+start_time=$(date +%s)
 source /venv/main/bin/activate
 # Redirect all output (stdout and stderr) to /workspace/startup.log
 exec > /workspace/startup.log 2>&1
@@ -126,4 +127,7 @@ pip install -r comfyui-dream-video-batches/requirements.txt
 echo 'Custom fix'
 mkdir -p /workspace/comfyui/ComfyUI/custom_nodes/ComfyUI-Frame-Interpolation/ckpts/rife
 wget -O /workspace/comfyui/ComfyUI/custom_nodes/ComfyUI-Frame-Interpolation/ckpts/rife/rife47.pth https://huggingface.co/jasonot/mycomfyui/resolve/main/rife47.pth
+end_time=$(date +%s)
+duration=$((end_time - start_time))
+echo "Duration: ${duration} seconds"
 echo '____FINISHED____'
