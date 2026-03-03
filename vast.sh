@@ -127,6 +127,10 @@ pip install -r comfyui-dream-video-batches/requirements.txt
 echo 'Custom fix'
 mkdir -p /workspace/comfyui/ComfyUI/custom_nodes/ComfyUI-Frame-Interpolation/ckpts/rife
 wget -O /workspace/comfyui/ComfyUI/custom_nodes/ComfyUI-Frame-Interpolation/ckpts/rife/rife47.pth https://huggingface.co/jasonot/mycomfyui/resolve/main/rife47.pth
+
+comfy node update all
+comfy update all
+
 end_time=$(date +%s)
 duration=$((end_time - start_time))
 echo "Duration: ${duration} seconds"
