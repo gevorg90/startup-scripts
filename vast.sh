@@ -23,7 +23,7 @@ pip install bitsandbytes "accelerate>=0.26.0" sageattention==1.0.6
 
 echo 'Download checkpoints'
 cd /workspace/comfyui/ComfyUI/models/checkpoints
-wget wget https://huggingface.co/Lightricks/LTX-2.3-fp8/resolve/main/ltx-2.3-22b-dev-fp8.safetensors
+wget https://huggingface.co/Lightricks/LTX-2.3-fp8/resolve/main/ltx-2.3-22b-dev-fp8.safetensors
 
 echo 'Download LORA models'
 cd /workspace/comfyui/ComfyUI/models/loras
