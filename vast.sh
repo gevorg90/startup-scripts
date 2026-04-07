@@ -80,6 +80,9 @@ comfy node install ComfyUI_LoadImageFromHttpURL
 cd /workspace/comfyui
 cd ComfyUI/custom_nodes
 
+echo 'Installing LoadImageFromHttpURLNorm from git'
+git clone https://github.com/renderforest/load-image-comfy.git
+
 echo 'Installing ComfyUI-Impact-Pack from git'
 git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack 
 pip install -r ComfyUI-Impact-Pack/requirements.txt
